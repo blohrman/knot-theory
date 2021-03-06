@@ -28,19 +28,18 @@ def relabel(arr):
         
         # loop over each item in the dictionary. if the current index is in the values, add the correct label
         # to the corresponding indices in the relabeled array
-        toDelete = -1
         for key, val in indexMap.items():
             if i in val:
-                toDelete = key
+                #toDelete = key
                 
                 # this is always of length 2 so it looks like bad time complexity but it's not as bad I promise
                 for index in val:
                     relabeled[index] = label
-        
-        # if something was found for the corresponding index, remove from the map and increase the label
-        if (toDelete != -1):
-            del indexMap[toDelete]
-            label += 1
+                
+                # delete current entry in map (so we don't get weird things) and increase the label counter
+                del indexMap[key]
+                label += 1
+                break
         
     return relabeled
 
