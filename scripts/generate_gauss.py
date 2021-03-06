@@ -30,7 +30,6 @@ def relabel(arr):
         # to the corresponding indices in the relabeled array
         for key, val in indexMap.items():
             if i in val:
-                #toDelete = key
                 
                 # this is always of length 2 so it looks like bad time complexity but it's not as bad I promise
                 for index in val:
