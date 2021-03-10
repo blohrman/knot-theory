@@ -74,10 +74,12 @@ def generate_gauss_codes(gauss_code):
     # concatenate the two to get them in one mega list
     codes = np.concatenate((codes, reversals))
     
-    # relabel and make it pretty
+    # relabel, make it pretty, and ensure no duplicates are added
     out = []
     for code in codes:
-        code = relabel(code)
-        out.append(arr_to_str(code))
+        code = arr_to_str(relabel(code))
+        
+        if code not in out:
+            out.append(code)
     
     return out
