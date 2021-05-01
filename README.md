@@ -17,7 +17,8 @@ You will find three directories within this project.
 2. `haskell/`
     * `convert.hs`: This contains functionality to convert a DT Code to a Gauss Code (though it's currently not the best...).
 3. `prolog/`
-    * `convert.pro`: This contains functionality to convert a DT Code to a Gauss Code, done in a much better way than in Haskell (lol).
+    * `dt_to_gauss.pl`: This contains functionality to convert a DT Code to a Gauss Code, done in a much better way than in Haskell (lol).
+    * `util.pl`: This contains a bunch of utility predicates, such as converting a string to an array.
 
 I will be adding more functionality to all three of the above directories! If you'd like to learn about some cool programming languages, feel free to compare the implementations and see how I approached the problems differently in each one.
 
